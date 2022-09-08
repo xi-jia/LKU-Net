@@ -13,6 +13,29 @@ If you find the code helpful, please consider citing our work.
     }
 
 ## IXI
+### Updates (2022 Sep 08)
+
+Thanks for the kind reminder from [@Junyu](https://github.com/junyuchen245), the leading author of [TransMorph](https://github.com/junyuchen245/TransMorph_Transformer_for_Medical_Image_Registration) (which is accepted by MIA now), that using bilinear interpolation improves the Dice scores when even warping image labels.
+
+Hence, in line with TransMorph, we accordingly updated all the results (see the table below) on the IXI data by changing the interpolation of LKU-Net from 'nearest' to 'bilinear'.
+| Dice             | Nearest     | Bilinear    |
+|------------------|-------------|-------------|
+| TransMorph       | 0.746±0.128 | 0.753±0.123 |
+| TransMorph-Bayes | 0.746±0.123 | 0.754±0.124 |
+| TransMorph-bspl  | 0.752±0.128 | 0.761±0.122 |
+| TransMorph-diff  | 0.599±0.156 | 0.594±0.163 |
+| U-Net4           | 0.727±0.126 | 0.733±0.125 |
+| U-Net-diff4      | 0.744±0.123 | 0.751±0.123 |
+| LKU-Net4,5       | 0.752±0.131 | 0.758±0.130 |
+| LKU-Net-diff4,5  | 0.746±0.133 | 0.752±0.132 |
+| LKU-Net8,5       | 0.757±0.128 | 0.765±0.129 |
+| LKU-Net-diff8,5  | 0.753±0.132 | 0.760±0.132 |
+| LKU-Net-diff16,5 | 0.757±0.132 | 0.764±0.131 |
+
+Note that we list the results of TransMorph and LKU-Net only, the results of other compared methods can be found in the [IXI page of TransMorph](https://github.com/junyuchen245/TransMorph_Transformer_for_Medical_Image_Registration/blob/main/IXI/TransMorph_on_IXI.md).
+
+Additionaly, we add one more results of the LKU-Net-Dif(16,5), the model can be downloaded from [this Google Drive Link](https://drive.google.com/file/d/1VzgsZuHoMxobO5CxKDNGcM46Q7_n5-FA/view?usp=sharing).
+
 ### Data Preparing
 We directly used [the preprocessed IXI data](https://github.com/junyuchen245/TransMorph_Transformer_for_Medical_Image_Registration/blob/main/IXI/TransMorph_on_IXI.md) and followed the exact training, validation, and testing protocol.
 ### Training and Testing
@@ -21,7 +44,7 @@ Before training and testing, please change the image loading and model saving di
 The kernel size of LKU-Net can be changed in  class `LK_encoder` in Models.py.
 
     python train.py --start_channel 8 --using_l2 2 --lr 1e-4 --checkpoint 403 --iteration 403001 --smth_labda 5.0
-    python infer.py --start_channel 8 --using_l2 2 --lr 1e-4 --checkpoint 403 --iteration 403001 --smth_labda 5.0
+    python infer.py / infer_bilinear.py --start_channel 8 --using_l2 2 --lr 1e-4 --checkpoint 403 --iteration 403001 --smth_labda 5.0
     python compute_dsc_jet_from_quantiResult.py
 Using the command above, one can easily reproduce our results.
 Additionally, we provided the trained models for directly computing the reported results.
