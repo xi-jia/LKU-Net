@@ -1,4 +1,4 @@
-# Large Kernel U-Net (LKU-Net) for Medical Imaging Registration.
+# Large Kernel U-Net (LKU-Net) for Medical Imaging Registration
 Key facts of LKU-Net:
 * [LKU-Net](https://arxiv.org/pdf/2208.04939.pdf) is inspired by [RepVGG](https://openaccess.thecvf.com/content/CVPR2021/html/Ding_RepVGG_Making_VGG-Style_ConvNets_Great_Again_CVPR_2021_paper.html), [RepLK-ResNet](https://openaccess.thecvf.com/content/CVPR2022/html/Ding_Scaling_Up_Your_Kernels_to_31x31_Revisiting_Large_Kernel_Design_CVPR_2022_paper.html), [IC-Net](https://github.com/zhangjun001/ICNet), [SYM-Net,](https://github.com/cwmok/Fast-Symmetric-Diffeomorphic-Image-Registration-with-Convolutional-Neural-Networks) and [TransMorph](https://github.com/junyuchen245/TransMorph_Transformer_for_Medical_Image_Registration). 
 
