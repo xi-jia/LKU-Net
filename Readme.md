@@ -16,6 +16,8 @@ If you find this repo helpful, please consider citing our work.
       journal={arXiv preprint arXiv:2208.04939},
       year={2022}
     }
+    
+Note that the data used in this work can be publicly accessed from [MICCAI 2021 L2R Challenge](https://learn2reg.grand-challenge.org/) and [TransMorph IXI](https://github.com/junyuchen245/TransMorph_Transformer_for_Medical_Image_Registration/blob/main/IXI/TransMorph_on_IXI.md).
 
 ## IXI
 ### Updates (2022 Sep 08)
