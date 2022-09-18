@@ -1,11 +1,11 @@
 # LKU-Net (Large Kernel U-Net) for medical imaging registration.
-1. [LKU-Net](https://arxiv.org/pdf/2208.04939.pdf) is inspired by [RepVGG](https://openaccess.thecvf.com/content/CVPR2021/html/Ding_RepVGG_Making_VGG-Style_ConvNets_Great_Again_CVPR_2021_paper.html), [RepLK-ResNet](https://openaccess.thecvf.com/content/CVPR2022/html/Ding_Scaling_Up_Your_Kernels_to_31x31_Revisiting_Large_Kernel_Design_CVPR_2022_paper.html), [IC-Net](https://github.com/zhangjun001/ICNet), [SYM-Net,](https://github.com/cwmok/Fast-Symmetric-Diffeomorphic-Image-Registration-with-Convolutional-Neural-Networks) and [TransMorph](https://github.com/junyuchen245/TransMorph_Transformer_for_Medical_Image_Registration). 
+1.[LKU-Net](https://arxiv.org/pdf/2208.04939.pdf) is inspired by [RepVGG](https://openaccess.thecvf.com/content/CVPR2021/html/Ding_RepVGG_Making_VGG-Style_ConvNets_Great_Again_CVPR_2021_paper.html), [RepLK-ResNet](https://openaccess.thecvf.com/content/CVPR2022/html/Ding_Scaling_Up_Your_Kernels_to_31x31_Revisiting_Large_Kernel_Design_CVPR_2022_paper.html), [IC-Net](https://github.com/zhangjun001/ICNet), [SYM-Net,](https://github.com/cwmok/Fast-Symmetric-Diffeomorphic-Image-Registration-with-Convolutional-Neural-Networks) and [TransMorph](https://github.com/junyuchen245/TransMorph_Transformer_for_Medical_Image_Registration). 
 
-2. LKU-Net ranks first on the 2021 Learn2Reg Challenge Task 3 Validation dataset (see [here](https://learn2reg.grand-challenge.org/evaluation/task-3-validation/leaderboard/)) as of 18th September, 2022
+2.LKU-Net ranks first on the 2021 Learn2Reg Challenge Task 3 Validation dataset (see [here](https://learn2reg.grand-challenge.org/evaluation/task-3-validation/leaderboard/)) as of 18th September, 2022
 
-3. LKU-Net is also the winning entry on the 2021 Learn2Reg Challenge Task 1.  
+3.LKU-Net is also the winning entry on the 2021 Learn2Reg Challenge Task 1.  
 
-4. Please see our [poster](http://www.cs.bham.ac.uk/~duanj/slides/UNet-TransMorph.pdf) or watch the [video](http://www.cs.bham.ac.uk/~duanj/slides/UNet-TransMorph.mp4) for further information. 
+4.Please see our [poster](http://www.cs.bham.ac.uk/~duanj/slides/UNet-TransMorph.pdf) or watch the [video](http://www.cs.bham.ac.uk/~duanj/slides/UNet-TransMorph.mp4) for further information. 
 
 The data used in this work can be publicly accessed from [MICCAI 2021 L2R Challenge](https://learn2reg.grand-challenge.org/) and [TransMorph IXI](https://github.com/junyuchen245/TransMorph_Transformer_for_Medical_Image_Registration/blob/main/IXI/TransMorph_on_IXI.md) page.
 
