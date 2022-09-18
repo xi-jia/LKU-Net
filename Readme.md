@@ -2,9 +2,9 @@
 Key facts of LKU-Net:
 * [LKU-Net](https://arxiv.org/pdf/2208.04939.pdf) is inspired by [RepVGG](https://openaccess.thecvf.com/content/CVPR2021/html/Ding_RepVGG_Making_VGG-Style_ConvNets_Great_Again_CVPR_2021_paper.html), [RepLK-ResNet](https://openaccess.thecvf.com/content/CVPR2022/html/Ding_Scaling_Up_Your_Kernels_to_31x31_Revisiting_Large_Kernel_Design_CVPR_2022_paper.html), [IC-Net](https://github.com/zhangjun001/ICNet), [SYM-Net,](https://github.com/cwmok/Fast-Symmetric-Diffeomorphic-Image-Registration-with-Convolutional-Neural-Networks) and [TransMorph](https://github.com/junyuchen245/TransMorph_Transformer_for_Medical_Image_Registration). 
 
-* LKU-Net ranks first on the 2021 MICCAI Learn2Reg Challenge Task 3 Validation dataset (see [here](https://learn2reg.grand-challenge.org/evaluation/task-3-validation/leaderboard/)) as of 18th September, 2022
+* LKU-Net ranks first on the [2021 MICCAI Learn2Reg Challenge Task 3 Validation dataset](https://learn2reg.grand-challenge.org/evaluation/task-3-validation/leaderboard/) as of 18th September, 2022
 
-* LKU-Net is also the winning entry on the 2022 MICCAI Learn2Reg Challenge Task 1.  
+* LKU-Net is also the winning entry on the [2022 MICCAI Learn2Reg Challenge Task 1](documents/result.png).  
 
 * Please see our [poster](http://www.cs.bham.ac.uk/~duanj/slides/UNet-TransMorph.pdf) or watch the [video](http://www.cs.bham.ac.uk/~duanj/slides/UNet-TransMorph.mp4) for further information. 
 
