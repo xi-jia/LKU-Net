@@ -8,9 +8,7 @@ Key facts of LKU-Net:
 
 * Please see our [poster](http://www.cs.bham.ac.uk/~duanj/slides/UNet-TransMorph.pdf) or watch the [video](http://www.cs.bham.ac.uk/~duanj/slides/UNet-TransMorph.mp4) for further information. 
 
-The data used in this work can be publicly accessed from [MICCAI 2021 L2R Challenge](https://learn2reg.grand-challenge.org/) and [TransMorph IXI](https://github.com/junyuchen245/TransMorph_Transformer_for_Medical_Image_Registration/blob/main/IXI/TransMorph_on_IXI.md) page.
-
-If you find the code helpful, please consider citing our work.
+If you find this repo helpful, please consider citing our work.
 
     @article{jia2022lkunet,
       title={U-Net vs Transformer: Is U-Net Outdated in Medical Image Registration?},
