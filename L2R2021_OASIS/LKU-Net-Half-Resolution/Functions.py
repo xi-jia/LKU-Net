@@ -14,23 +14,6 @@ from os.path import join
 import itertools
 import pandas as pd
 
-def crop_and_pad(img,sizex,sizey,sizez):
-    img_new = np.zeros((sizex,sizey,sizez))
-    h = np.amin([sizex,img.shape[0]])
-    w = np.amin([sizey,img.shape[1]])
-    d = np.amin([sizez,img.shape[2]])
-
-    img_new[sizex//2-h//2:sizex//2+h//2,sizey//2-w//2:sizey//2+w//2,sizez//2-d//2:sizez//2+d//2]=img[img.shape[0]//2-h//2:img.shape[0]//2+h//2,img.shape[1]//2-w//2:img.shape[1]//2+w//2,img.shape[2]//2-d//2:img.shape[2]//2+d//2]
-    return img_new
-def rescale_intensity(image, thres=(0.0, 100.0)):
-    """ Rescale the image intensity to the range of [0, 1] """
-    image = image.astype(np.float32)
-    val_l, val_h = np.percentile(image, thres)
-    image2 = image
-    image2[image < val_l] = val_l
-    image2[image > val_h] = val_h
-    image2 = (image2.astype(np.float32) - val_l) / (val_h - val_l)
-    return image2
 def load_train_pair(data_path, filename1, filename2):
     # Load images and labels
     nim1 = nib.load(os.path.join(data_path, 'hyperdata', filename1, 'aligned_norm.nii.gz'))
@@ -41,26 +24,12 @@ def load_train_pair(data_path, filename1, filename2):
     image2 = nim2.get_data()
     image2 = np.array(image2, dtype='float32')
     
-    # img5 = np.nonzero(image2)
-    # imm = np.min(image2[img5])
-    # print(imm)
-    # img5 = np.nonzero(image1)
-    # imm = np.min(image1[img5])
-    # print(imm)
-    # assert 0 == 1
-    # print(image1.shape)
-    # print(image1.max())
-    # print(image1.mean())
-    # assert 0==1
-    
     nim5 = nib.load(os.path.join(data_path, 'hyperdata', filename1, 'aligned_seg35.nii.gz'))
     image5 = nim5.get_data()
     image5 = np.array(image5, dtype='float32')
-    #image5 = image5 / 35.0
     nim6 = nib.load(os.path.join(data_path, 'hyperdata', filename2, 'aligned_seg35.nii.gz'))
     image6 = nim6.get_data()
-    image6 = np.array(image6, dtype='float32') # 0 - 35 -》 0- 1
-    #image6 = image6 / 35.0
+    image6 = np.array(image6, dtype='float32') 
     
     image1 = np.reshape(image1, (1,) + image1.shape)
     image2 = np.reshape(image2, (1,) + image2.shape)
@@ -77,20 +46,20 @@ class TrainDataset(Data.Dataset):
         self.names = np.loadtxt(os.path.join(self.data_path, img_file),dtype='str')
         if trainingset == 1:
             self.filename = list(zip(self.names[:-1], self.names[1:]))
-            assert len(self.filename) == 200, "Oh no! # of images != 200."
+            assert len(self.filename) == 200, "# of images != 200."
         elif trainingset == 2:
             self.filename = list(zip(self.names[1:], self.names[:-1]))
-            assert len(self.filename) == 200, "Oh no! # of images != 200."
+            assert len(self.filename) == 200, "# of images != 200."
         elif trainingset == 3:
             self.zip_filename_1 = list(zip(self.names[:-1], self.names[1:]))
             self.zip_filename_2 = list(zip(self.names[1:], self.names[:-1]))
             self.filename = self.zip_filename_1 + self.zip_filename_2
-            assert len(self.filename) == 400, "Oh no! # of images != 400."
+            assert len(self.filename) == 400, "# of images != 400."
         elif trainingset == 4:
             self.filename = list(itertools.permutations(self.names, 2))
             print(len(self.names))
             print(len(self.filename))
-            assert len(self.filename) == 154842, "Oh no! # of images != 400."
+            assert len(self.filename) == 154842, "# of images != 154842."
         
         else:
              assert 0==1, print('TrainDataset Invalid!')
