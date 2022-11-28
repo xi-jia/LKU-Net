@@ -1,0 +1,4 @@
+CUDA_VISIBLE_DEVICES=0 python train.py --start_channel 32 --using_l2 1 --smth_labda 0.01 --lr 1e-4
+
+
+
