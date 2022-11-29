@@ -58,7 +58,7 @@ Additionally, we provided the trained models for directly computing the reported
 
 ## L2R 2021 OASIS
 
-Pretrained models can be downloaded from this [Google Drive Link](https://drive.google.com/drive/folders/1lEVKNEyUqKMVqhtjr9iL27fLs8RuR1oe?usp=share_link)
+Pretrained models can be downloaded from this [Google Drive Link](https://drive.google.com/drive/folders/1VfZmOyqneEqQJ-DMCuN6EtKczA4lUcet)
 
 ## Discussion
 1) Batch size.
