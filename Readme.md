@@ -56,6 +56,10 @@ The kernel size of LKU-Net can be changed in  class `LK_encoder` in Models.py.
 Using the command above, one can easily reproduce our results.
 Additionally, we provided the trained models for directly computing the reported results.
 
+## L2R 2021 OASIS
+
+Pretrained models can be downloaded from this [Google Drive Link](https://drive.google.com/drive/folders/1lEVKNEyUqKMVqhtjr9iL27fLs8RuR1oe?usp=share_link)
+
 ## Discussion
 1) Batch size.
 In the paper, we used `batch size = 1`, this parameter is however not carefully tuned. The only reason we use `batch size = 1`  is that we want to eliminate the effects caused by GPU memory, as some lighter GPUs may not be able to fit on larger batch sizes.
