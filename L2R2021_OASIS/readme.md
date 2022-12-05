@@ -7,3 +7,7 @@ The fourth strategy generates the most training image pairs and is used as defau
 ## Submission
 
 The validation_submission.py creates a subfolder [submission] in the current directory, which can be used for online evaluation.
+
+## L2R 2021 OASIS
+
+Pretrained models can be downloaded from this [Google Drive Link](https://drive.google.com/drive/folders/1VfZmOyqneEqQJ-DMCuN6EtKczA4lUcet)
