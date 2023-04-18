@@ -288,7 +288,7 @@ class SAD:
 
 if __name__ == "__main__":
     from torchsummary import summary
-    from Models import *
-
+    # The first para 2 is the input channel.
+    # The second para 8 is the number of channels in first conv layers, enlarging the value returns larger networks.
     model = UNet(2, 8)
     summary(model, [(1, 81, 128, 128),(1, 81,128, 128)])
