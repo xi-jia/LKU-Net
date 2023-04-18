@@ -219,6 +219,8 @@ class UNet(nn.Module):
         
 
 """
+NCC is from SYMNet.
+https://github.com/cwmok/Fast-Symmetric-Diffeomorphic-Image-Registration-with-Convolutional-Neural-Networks/blob/master/Code/Models.py
 Normalized local cross-correlation function in Pytorch. Modified from https://github.com/voxelmorph/voxelmorph.
 """
 class NCC(torch.nn.Module):
