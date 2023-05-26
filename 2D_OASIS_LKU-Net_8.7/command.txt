@@ -1,0 +1,33 @@
+
+cd /bask/projects/d/duanj-ai-imaging/UvT/OASIS_2D/Rep-U-Net-P-LK7-wIw1-PReLU/
+conda activate accreg
+CUDA_VISIBLE_DEVICES=0 python train.py --start_channel 8 --using_l2 1 --smth_labda 0.005 --lr 1e-4  --trainingset 4 --iteration 402001 --checkpoint 4020
+
+
+cd /bask/projects/d/duanj-ai-imaging/UvT/OASIS_2D/Rep-U-Net-P-LK7-wIw1-PReLU/
+conda activate accreg
+CUDA_VISIBLE_DEVICES=1 python train.py --start_channel 8 --using_l2 1 --smth_labda 0.01 --lr 1e-4  --trainingset 4 --iteration 402001 --checkpoint 4020
+
+
+
+cd /bask/projects/d/duanj-ai-imaging/UvT/OASIS_2D/Rep-U-Net-P-LK7-wIw1-PReLU/
+conda activate accreg
+CUDA_VISIBLE_DEVICES=0 python train.py --start_channel 8 --using_l2 2 --smth_labda 0.1 --lr 1e-4  --trainingset 4 --iteration 402001 --checkpoint 4020
+
+
+
+
+cd /bask/projects/d/duanj-ai-imaging/UvT/OASIS_2D/Rep-U-Net-P-LK7-wIw1-PReLU/
+conda activate accreg
+CUDA_VISIBLE_DEVICES=1 python train.py --start_channel 8 --using_l2 2 --smth_labda 0.05 --lr 1e-4  --trainingset 4 --iteration 402001 --checkpoint 4020
+
+
+
+
+cd /bask/projects/d/duanj-ai-imaging/UvT/OASIS_2D/Rep-U-Net-P-LK7-wIw1-PReLU/
+conda activate accreg
+CUDA_VISIBLE_DEVICES=0 python infer.py --start_channel 8 --using_l2 1 --smth_labda 0.005 --lr 1e-4  --trainingset 4 --iteration 402001 --checkpoint 4020
+
+cd /bask/projects/d/duanj-ai-imaging/UvT/OASIS_2D/Rep-U-Net-P-LK7-wIw1-PReLU/
+conda activate accreg
+CUDA_VISIBLE_DEVICES=0 python infer.py --start_channel 8 --using_l2 2 --smth_labda 0.05 --lr 1e-4  --trainingset 4 --iteration 402001 --checkpoint 4020
