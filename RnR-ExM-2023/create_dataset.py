@@ -11,18 +11,18 @@ import h5py
 
 filename = './Celegan/Test/c_elegan_pair7'
 # '''
-def validation_crop_and_pad(img):
-    # print(img.shape)
-    # print(y.shape)
-    img_new = np.zeros((559, 256, 256))#.float().cuda()
-    sizex, sizey, sizez = 559, 256, 256
-    # assert sizex ==559
-    h = np.amin([sizex,img.shape[0]])
-    w = np.amin([sizey,img.shape[1]])
-    d = np.amin([sizez,img.shape[2]])
+# def validation_crop_and_pad(img):
+#     # print(img.shape)
+#     # print(y.shape)
+#     img_new = np.zeros((559, 256, 256))#.float().cuda()
+#     sizex, sizey, sizez = 559, 256, 256
+#     # assert sizex ==559
+#     h = np.amin([sizex,img.shape[0]])
+#     w = np.amin([sizey,img.shape[1]])
+#     d = np.amin([sizez,img.shape[2]])
 
-    img_new[sizex//2-h//2:sizex//2+h//2,sizey//2-w//2:sizey//2+w//2,sizez//2-d//2:sizez//2+d//2]=img[img.shape[0]//2-h//2:img.shape[0]//2+h//2,img.shape[1]//2-w//2:img.shape[1]//2+w//2,img.shape[2]//2-d//2:img.shape[2]//2+d//2]
-    return img_new
+#     img_new[sizex//2-h//2:sizex//2+h//2,sizey//2-w//2:sizey//2+w//2,sizez//2-d//2:sizez//2+d//2]=img[img.shape[0]//2-h//2:img.shape[0]//2+h//2,img.shape[1]//2-w//2:img.shape[1]//2+w//2,img.shape[2]//2-d//2:img.shape[2]//2+d//2]
+#     return img_new
 
 def rescale_intensity(image, thres=(0.01, 99.99)):
     """ Rescale the image intensity to the range of [0, 1] """
