@@ -183,6 +183,9 @@ class UNet(nn.Module):
         # x_new = F.pad(x, p3d, "constant", 0)
         # y_new = F.pad(y, p3d, "constant", 0)
         # x_in = torch.cat((x_new, y_new), 1)
+        # 3 warped_x, affine_mat = self.affine_trans(x, rot, scl, shr, trans)
+        #    warping is imposed on x to produce warped_x.
+        #    loss is imposed on warped_x and y.
         
         x_in = torch.cat((x, y), 1)
         e0 = self.eninput(x_in)
