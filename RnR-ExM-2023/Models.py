@@ -173,8 +173,10 @@ class UNet(nn.Module):
         # y_small = torch.nn.functional.interpolate(y, size=[81, 128, 128], mode='trilinear', align_corners=True)
         
         # For Zebrafish/Celegan
-        # p3d = (0, 0, 0, 0, 65, 64)
-        # (0, 0, 0, 0, 31, 31)
+        # 1 Pad images to the same dimension
+        # 2 Change the #neurons in FC layer: 8 * 6 * 8 * 8
+        # p3d = (0, 0, 0, 0, 31, 31)
+        # (0, 0, 0, 0, 65, 64)
         # (0, 0, 0, 0, 101, 100)
         # x_new = F.pad(x, p3d, "constant", 0)
         # x_in = torch.cat((x_new, y), 1)
