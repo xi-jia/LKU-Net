@@ -171,6 +171,14 @@ class UNet(nn.Module):
     def forward(self, x, y):
         # x_small = torch.nn.functional.interpolate(x, size=[81, 128, 128], mode='trilinear', align_corners=True)
         # y_small = torch.nn.functional.interpolate(y, size=[81, 128, 128], mode='trilinear', align_corners=True)
+        
+        # For Zebrafish/Celegan
+        # p3d = (0, 0, 0, 0, 65, 64)
+        # (0, 0, 0, 0, 31, 31)
+        # (0, 0, 0, 0, 101, 100)
+        # x_new = F.pad(x, p3d, "constant", 0)
+        # x_in = torch.cat((x_new, y), 1)
+        
         x_in = torch.cat((x, y), 1)
         e0 = self.eninput(x_in)
         e0 = self.ec1(e0)
