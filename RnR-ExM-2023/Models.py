@@ -174,12 +174,15 @@ class UNet(nn.Module):
         
         # For Zebrafish/Celegan
         # 1 Pad images to the same dimension
+        #    the x_new/y_new is used to compute the affine matrix.
+        #    while warping is still imposed on x/y.
         # 2 Change the #neurons in FC layer: 8 * 6 * 8 * 8
         # p3d = (0, 0, 0, 0, 31, 31)
         # (0, 0, 0, 0, 65, 64)
         # (0, 0, 0, 0, 101, 100)
         # x_new = F.pad(x, p3d, "constant", 0)
-        # x_in = torch.cat((x_new, y), 1)
+        # y_new = F.pad(y, p3d, "constant", 0)
+        # x_in = torch.cat((x_new, y_new), 1)
         
         x_in = torch.cat((x, y), 1)
         e0 = self.eninput(x_in)
