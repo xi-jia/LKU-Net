@@ -406,9 +406,9 @@ class UNet(nn.Module):
         p3d = (0, 0, 0, 0, 101, 100)
         x_new = F.pad(x, p3d, "constant", 0)
         # y_new = F.pad(y, p3d, "constant", 0)
-        print(f"---------------")
-        print(f"x new shape: {x_new.shape}")
-        print(f"y new shape: {y.shape}")
+        # print(f"---------------")
+        # print(f"x new shape: {x_new.shape}")
+        # print(f"y new shape: {y.shape}")
 
         x_in = torch.cat((x_new, y), 1)
 
@@ -455,9 +455,9 @@ class UNet(nn.Module):
 
         shr = torch.clamp(shr, min=-1, max=1) * np.pi
 
-        print(f"x shape: {x.shape}")
+        # print(f"x shape: {x.shape}")
         warped_x, affine_mat = self.affine_trans(x, y.shape[2], rot, scl, shr, trans)
-        print(f"warped_x shape: {warped_x.shape}")
+        # print(f"warped_x shape: {warped_x.shape}")
         
         return warped_x, affine_mat
     
