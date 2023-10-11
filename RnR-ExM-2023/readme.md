@@ -1,6 +1,6 @@
 We extend LKU-Net with an Affine version for RnR-Exm 2023 Challenge.
 
-The code and detailed descsription will be updated in the following weeks.
+The code and detailed description will be updated in the following weeks.
 
 
 ## Updating
@@ -8,5 +8,7 @@ The code and detailed descsription will be updated in the following weeks.
       ```
       LKU-Net-Affine = UNet(2, 8)
       ```
+
+- [x] Updated the pre-trained model on the mouse dataset, [see here](https://drive.google.com/drive/folders/1PETLjQ7jV6jUmtvZnfvBlAt1Zl_21TWP?usp=sharing). Oct 11 2023.\
 - [ ] Update the training and testing configurations.
-- [ ] Update detailed describtions about the LKU-Net-Affine.
+- [ ] Update detailed descriptions about the LKU-Net-Affine.
