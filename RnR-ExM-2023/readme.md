@@ -1,4 +1,6 @@
-We extend LKU-Net with an Affine version for RnR-Exm 2023 Challenge.
+We extend LKU-Net with an Affine Head for the recent RnR-Exm 2023 Challenge.
+
+The affine head is adopted from **TransMorph**.
 
 The code and detailed description will be updated in the following weeks.
 
