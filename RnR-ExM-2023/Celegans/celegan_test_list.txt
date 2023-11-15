@@ -1,3 +1,0 @@
-./Celegan/Test/c_elegan_pair5
-./Celegan/Test/c_elegan_pair6
-./Celegan/Test/c_elegan_pair7

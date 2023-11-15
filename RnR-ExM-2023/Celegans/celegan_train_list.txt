@@ -1,4 +1,0 @@
-./Celegan/Train/c_elegan_pair0
-./Celegan/Train/c_elegan_pair1
-./Celegan/Train/c_elegan_pair2
-./Celegan/Train/c_elegan_pair3
