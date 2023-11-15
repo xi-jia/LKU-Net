@@ -4,7 +4,9 @@ Key facts of [LKU-Net](https://arxiv.org/pdf/2208.04939.pdf):
 
 * LKU-Net ranks first on the 2021 MICCAI [Learn2Reg](https://learn2reg.grand-challenge.org/evaluation/task-3-validation/leaderboard/) Challenge Task 3 Validation as of 18th September, 2022
 
-* LKU-Net is also the winning entry on the 2022 MICCAI [Learn2Reg](documents/result.png) Challenge Task 1.  
+* LKU-Net is also the winning entry on the 2022 MICCAI [Learn2Reg](documents/result.png) Challenge Task 1.
+  
+* [LKU-Net-Affine](https://github.com/xi-jia/LKU-Net/tree/main/RnR-ExM-2023) ranks 2nd place on the 2023 ISBI [RnR-ExM](https://rnr-exm.grand-challenge.org/isbi-2023-leaderboards/) Challenge.  
 
 * Please see our [poster](http://www.cs.bham.ac.uk/~duanj/slides/UNet-TransMorph.pdf) or watch the [video](http://www.cs.bham.ac.uk/~duanj/slides/UNet-TransMorph.mp4) for further information. 
 
